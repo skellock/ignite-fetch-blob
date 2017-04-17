@@ -1,7 +1,7 @@
 {
   "name": "ignite-fetch-blob",
   "description": "An ignite plugin for react-native-image-blob.",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "license": "MIT",
   "author": {
     "name": "Steve Kellock",
