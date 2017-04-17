@@ -2,16 +2,9 @@ const test = require('ava')
 const sinon = require('sinon')
 const plugin = require('../plugin')
 
-test('removes FetchBlob', async t => {
+test('can be removed', async t => {
   const removeModule = sinon.spy()
-  const removePluginComponentExample = sinon.spy()
-
-  const context = {
-    ignite: { removeModule, removePluginComponentExample }
-  }
-
+  const context = { ignite: { removeModule } }
   await plugin.remove(context)
-
-  t.true(removeModule.calledWith('react-native-MODULENAME', { unlink: true }))
-  t.true(removePluginComponentExample.calledWith('FetchBlobExample.js'))
+  t.true(removeModule.calledWith('react-native-fetch-blob', { unlink: true }))
 })

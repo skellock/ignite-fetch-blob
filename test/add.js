@@ -2,22 +2,9 @@ const test = require('ava')
 const sinon = require('sinon')
 const plugin = require('../plugin')
 
-test('adds the proper npm module and component example', async t => {
-  // spy on few things so we know they're called
+test('can be added', async t => {
   const addModule = sinon.spy()
-  const addPluginComponentExample = sinon.spy()
-  
-  // mock a context
-  const context = {
-    ignite: { addModule, addPluginComponentExample }
-  }
-
+  const context = { ignite: { addModule } }
   await plugin.add(context)
-  
-  t.true(addModule.calledWith('react-native-MODULENAME', { link: true }))
-  t.true(
-    addPluginComponentExample.calledWith('FetchBlobExample.js', {
-      title: 'FetchBlob Example'
-    })
-  )
+  t.true(addModule.calledWith('react-native-fetch-blob', { link: true }))
 })

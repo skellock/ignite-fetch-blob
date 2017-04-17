@@ -1,10 +1,4 @@
-# My Plugin
+# ignite-fetch-blob
 
-This is where you would put an intro to your plugin, and maybe a few examples of usage. 
-
-## Example
-
-```js
-console.log("Hello World")
-```
+Adds [react-native-fetch-blob](https://github.com/wkh237/react-native-fetch-blob) to your project which is using [ignite](https://github.com/infinitered/ignite).
 
